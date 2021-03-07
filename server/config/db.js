@@ -1,5 +1,5 @@
 module.exports = {
   //local MongoDB deployment ->
-  "URI": "mongodb+srv://hajo:2Mq3wAUkubL5AQ66@cluster0.hyxkp.mongodb.net/booklist_record?retryWrites=true&w=majority"
+  "URI": "mongodb+srv://bookList:Secret@booklist.edvxt.mongodb.net/books?retryWrites=true&w=majority"
 }
 
