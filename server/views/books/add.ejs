@@ -1,0 +1,56 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                
+                <div class="form-group">
+                    <label for="NameTextField">Title</label>
+                    <input type="text" class="form-control"
+                    id="NameTextField"
+                    placeholder="Book Name"
+                    Title="Title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="PriceTextField">Price</label>
+                    <input type="text" class="form-control"
+                    id="PriceTextField"
+                    placeholder="Book Price"
+                    Price="Price" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="AuthorTextField">Author</label>
+                    <input type="text" class="form-control"
+                    id="AuthorTextField"
+                    placeholder="Book Author"
+                    Author="Author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="GenreTextField">Genre</label>
+                    <input type="text" class="form-control"
+                    id="GenreTextField"
+                    placeholder="Book Genre"
+                    Genre="Genre" required>
+                </div>
+               
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/books" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<%- include ../partials/footer.ejs %>
