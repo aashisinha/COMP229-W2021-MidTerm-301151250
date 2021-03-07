@@ -97,7 +97,7 @@ router.post('/details/:id', (req, res, next) => {
       }
       else
       {
-          //refresh
+          // Redirect the user back to the BookList page
           res.redirect('/books');
       }
   });
@@ -118,7 +118,7 @@ router.get('/delete/:id', (req, res, next) => {
       }
       else
       {
-           // refresh 
+           // Redirect the user back to the BookList page
            res.redirect('/books');
       }
   });
