@@ -1,3 +1,5 @@
+/* books.js | Aashi Sinha | 301151250 | Favourite Book List */
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -31,6 +33,8 @@ router.get('/add', (req, res, next) => {
 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
+
+  //Instantiating an object of the book model
   let newbook = book({
     "Title": req.body.title,
     "Price": req.body.price,
@@ -38,6 +42,7 @@ router.post('/add', (req, res, next) => {
     "Genre": req.body.genre       
 });
 
+//method of the book model
 book.create(newbook, (err, book) =>{
     if(err)
     {
@@ -46,7 +51,7 @@ book.create(newbook, (err, book) =>{
     }
     else
     {
-        // refresh 
+        // Redirect the user back to the BookList page 
         res.redirect('/books');
     }
 });
@@ -83,6 +88,7 @@ router.post('/details/:id', (req, res, next) => {
     "Genre": req.body.genre     
   });
 
+  //update method of the book model
   book.updateOne({_id: id}, updatedBooks, (err) => {
       if(err)
       {
@@ -103,6 +109,7 @@ router.get('/delete/:id', (req, res, next) => {
 
   let id = req.params.id;
 
+  //Passing ID to the book's remove method
   book.remove({_id: id}, (err) => {
       if(err)
       {

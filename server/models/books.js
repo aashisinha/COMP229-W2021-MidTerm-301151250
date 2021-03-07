@@ -1,3 +1,5 @@
+/* books.js | Aashi Sinha | 301151250 | Favourite Book List */
+
 let mongoose = require('mongoose');
 
 // create a model class
