@@ -54,7 +54,7 @@ book.create(newbook, (err, book) =>{
 });
 
 // GET the Book Details page in order to edit an existing Book
-router.get('/edit/:id', (req, res, next) => {
+router.get('/details/:id', (req, res, next) => {
   let id = req.params.id;
 
   book.findById(id, (err, booksToUpdate) => {
@@ -65,13 +65,13 @@ router.get('/edit/:id', (req, res, next) => {
       }
       else
       {
-          res.render('books/edit', {title: 'Edit Book', books: booksToUpdate})
+          res.render('books/details', {title: 'Edit Book', books: booksToUpdate})
       }
   });
 });
 
 // POST - process the information passed from the details form and update the document
-router.post('/edit/:id', (req, res, next) => {
+router.post('/details/:id', (req, res, next) => {
 
   let id = req.params.id
 
